@@ -14,9 +14,9 @@ void setup()
 void loop() 
 { if (PB_pressed() == 1)
   { while(1)
-    { Serial.println(analogRead(A0));
-      int line = analogRead(A0);
-      
+    { int line = analogRead(A0);
+      Serial.println(line);
+            
       if      (line < 200)  move(150, 40);  // Far right
       else if (line < 470)  move(130, 70);  // Right
       else if (line <= 530) move(100, 100); // Centre: 500 ±30
